@@ -13,6 +13,7 @@ func main() {
 	vars := os.Environ()
 
 	str := os.Getenv("DATABASE_URI")
+	RUNAdr := os.Getenv("RUN_ADDRESS")
 
 	fmt.Println(`+++++++++++++1`)
 	fmt.Println(vars)
@@ -39,6 +40,7 @@ func main() {
 	str1 := "postgresql://postgres:postgres@postgres/praktikum?sslmode=disable"
 	fmt.Println(str1)
 	fmt.Println(str)
+	fmt.Println(RUNAdr)
 	fmt.Println(`+++++++++++++`)
 
 	db, err := sql.Open("postgres", str1)
