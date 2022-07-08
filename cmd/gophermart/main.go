@@ -24,8 +24,8 @@ func main() {
 	var dbStringConnect string
 
 	flag.StringVar(&dbStringConnect, "d", "", "GOPHERMART-DATABASE-URI")
-	flag.StringVar(&serverAddress, "a", "", "SERVER_ADDRESS")
-	flag.StringVar(&baseURL, "b", "", "BASE_URL")
+	flag.StringVar(&serverAddress, "a", "", "gophermart-database-uri")
+	flag.StringVar(&baseURL, "b", "", "gophermart-port")
 	flag.StringVar(&fileStoragePath, "f", "", "FILE_STORAGE_PATH")
 	flag.Parse()
 
@@ -36,6 +36,7 @@ func main() {
 
 	fmt.Println(`+++++++++++++`)
 	fmt.Println(`str`)
+	str = "postgresql://postgres:postgres@postgres/praktikum?sslmode=disable"
 	fmt.Println(str)
 	fmt.Println(`+++++++++++++`)
 	var DB1 *sql.DB
