@@ -23,7 +23,7 @@ func main() {
 	var fileStoragePath string
 	var dbStringConnect string
 
-	flag.StringVar(&dbStringConnect, "d", "", "DATABASE_DSN")
+	flag.StringVar(&dbStringConnect, "d", "", "GOPHERMART-DATABASE-URI")
 	flag.StringVar(&serverAddress, "a", "", "SERVER_ADDRESS")
 	flag.StringVar(&baseURL, "b", "", "BASE_URL")
 	flag.StringVar(&fileStoragePath, "f", "", "FILE_STORAGE_PATH")
