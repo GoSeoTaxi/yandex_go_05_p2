@@ -40,13 +40,14 @@ func main() {
 	fmt.Println(str1)
 	fmt.Println(str)
 	fmt.Println(`+++++++++++++`)
-	var DB1 *sql.DB
-	var err error
-	DB1, err = sql.Open("postgres", str1)
+
+	db, err := sql.Open("postgres", str1)
 	if err != nil {
-		fmt.Println(`StaticTest - err`)
+		fmt.Println(`err sql open`)
 	}
-	fmt.Println(DB1)
+	defer db.Close()
+	ping := db.Ping()
+	fmt.Println(ping)
 
 	fmt.Println(`+++++++++++++`)
 	httpserver.MainServer()
