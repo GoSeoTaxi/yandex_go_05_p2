@@ -36,12 +36,13 @@ func main() {
 
 	fmt.Println(`+++++++++++++`)
 	fmt.Println(`str`)
-	str = "postgresql://postgres:postgres@postgres/praktikum?sslmode=disable"
+	str1 := "postgresql://postgres:postgres@postgres/praktikum?sslmode=disable"
+	fmt.Println(str1)
 	fmt.Println(str)
 	fmt.Println(`+++++++++++++`)
 	var DB1 *sql.DB
 	var err error
-	DB1, err = sql.Open("postgres", str)
+	DB1, err = sql.Open("postgres", str1)
 	if err != nil {
 		fmt.Println(`StaticTest - err`)
 	}
