@@ -1,4 +1,4 @@
-package httpServer
+package httpserver
 
 import (
 	"github.com/GoSeoTaxi/yandex_go_05_p2/internal/config"
@@ -15,7 +15,7 @@ func MainServer() {
 
 	//r.With(handlers.SetCookies).Post("/api/user/register", handlers.APIJSON)
 
-	r.Post("/api/user/register", handlers.ApiUserRegister)
+	r.Post("/api/user/register", handlers.APIUserRegister)
 
 	http.ListenAndServe(":"+config.PortServer, r)
 

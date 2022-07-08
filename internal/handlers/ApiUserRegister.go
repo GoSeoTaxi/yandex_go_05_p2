@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-func ApiUserRegister(w http.ResponseWriter, r *http.Request) {
+func APIUserRegister(w http.ResponseWriter, r *http.Request) {
 
 	b, err := io.ReadAll(r.Body)
 	if err != nil {
