@@ -12,6 +12,8 @@ func main() {
 
 	vars := os.Environ()
 
+	str := os.Getenv("DATABASE_URI")
+
 	fmt.Println(`+++++++++++++1`)
 	fmt.Println(vars)
 	fmt.Println(`+++++++++++++2`)
@@ -33,10 +35,12 @@ func main() {
 	fmt.Println(dbStringConnect)
 
 	fmt.Println(`+++++++++++++`)
-
+	fmt.Println(`str`)
+	fmt.Println(str)
+	fmt.Println(`+++++++++++++`)
 	var DB1 *sql.DB
 	var err error
-	DB1, err = sql.Open("postgres", dbStringConnect)
+	DB1, err = sql.Open("postgres", str)
 	if err != nil {
 		fmt.Println(`StaticTest - err`)
 	}
